@@ -112,10 +112,18 @@ ${0}
 endsnippet
 
 snippet pac "Package" b
-\usepackage[${1:options}]{${2:package}}$0
+\usepackage${1}{${2:package}}$0
 endsnippet
 
 snippet lp "Long parenthesis"
 \left(${1:${VISUAL:contents}}\right)$0
+endsnippet
+
+snippet tit "Italic text"
+\texit{${0}}${1}
+endsnippet
+
+snippet bf "Bold text"
+\textbf{${0}}${1}
 endsnippet
 # vim:ft=snippets:
