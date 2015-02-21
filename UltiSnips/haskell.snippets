@@ -6,6 +6,14 @@ if ${1:condition}
 	else ${3:expression}
 endsnippet
 
+snippet m "Module definition"
+module ${1}${2: }where${3}
+endsnippet
+
+snippet i "Import module"
+import ${1}
+endsnippet
+
 snippet case "case ... of ..."
 case ${1:expression} of
 	${2:pattern} -> ${3:expression}
