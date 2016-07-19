@@ -5,13 +5,13 @@ priority -50
 #
 
 snippet des "Describe (js)" b
-describe('${1:description}', function() {
+describe('${1:description}', () => {
 	$0
 });
 endsnippet
 
 snippet it "it (js)" b
-it('${1:description}', function() {
+it('${1:description}', () => {
 	$0
 });
 endsnippet
@@ -29,7 +29,7 @@ afterEach(function() {
 endsnippet
 
 snippet any "any (js)" b
-jasmine.any($1)
+jasmine.any($1);
 endsnippet
 
 snippet ru "runs (js)" b
@@ -43,59 +43,59 @@ waits($1);
 endsnippet
 
 snippet ex "expect (js)" b
-expect(${1:target})$0;
+expect(${1:target})$0
 endsnippet
 
 snippet ee "expect to equal (js)" b
-expect(${1:target}).toEqual(${2:value});
+expect(${1:target}).to.equal(${2:value});
 endsnippet
 
 snippet eb "expect to be (js)" b
-expect(${1:target}).toBe(${2:value});
+expect(${1:target}).to.be(${2:value});
 endsnippet
 
 snippet em "expect to match (js)" b
-expect(${1:target}).toMatch(${2:pattern});
+expect(${1:target}).to.match(${2:pattern});
 endsnippet
 
 snippet eha "expect to have attribute (js)" b
-expect(${1:target}).toHaveAttr('${2:attr}'${3:, '${4:value}'});
+expect(${1:target}).to.have.attr('${2:attr}'${3:, '${4:value}'});
 endsnippet
 
 snippet et "expect to be truthy (js)" b
-expect(${1:target}).toBeTruthy();
+expect(${1:target}).to.be.true;
 endsnippet
 
 snippet ef "expect to be falsy (js)" b
-expect(${1:target}).toBeFalsy();
+expect(${1:target}).to.be.false;
 endsnippet
 
 snippet ed "expect to be defined (js)" b
-expect(${1:target}).toBeDefined();
+expect(${1:target}).to.be.defined;
 endsnippet
 
 snippet en "expect to be null (js)" b
-expect(${1:target}).toBeNull();
+expect(${1:target}).to.be.null;
 endsnippet
 
 snippet ec "expect to contain (js)" b
-expect(${1:target}).toContain(${2:value});
+expect(${1:target}).to.contain(${2:value});
 endsnippet
 
 snippet ev "expect to be visible (js)" b
-expect(${1:target}).toBeVisible();
+expect(${1:target}).to.be.visible();
 endsnippet
 
 snippet eh "expect to be hidden (js)" b
-expect(${1:target}).toBeHidden();
+expect(${1:target}).to.be.hidden();
 endsnippet
 
 snippet notx "expect not (js)" b
-expect(${1:target}).not$0;
+expect(${1:target}).not$0
 endsnippet
 
 snippet note "expect not to equal (js)" b
-expect(${1:target}).not.toEqual(${2:value});
+expect(${1:target}).to.not.equal(${2:value});
 endsnippet
 
 snippet notm "expect not to match (js)" b
