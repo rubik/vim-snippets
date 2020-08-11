@@ -10,6 +10,12 @@ fn ${1:function_name}(${2})${3/..*/ -> /}${3} {
 }
 endsnippet
 
+snippet pfn "A public function, optionally with arguments and return type." b
+pub fn ${1:function_name}(${2})${3/..*/ -> /}${3} {
+	${VISUAL}${0}
+}
+endsnippet
+
 snippet pri "print!(..)" w
 print!("${1}"${2/..*/, /}${2});
 endsnippet
@@ -47,7 +53,7 @@ for ${1:i} in ${2:${3:0us}..${4:10}} {
 endsnippet
 
 snippet todo "A Todo comment"
-// [TODO]: ${1:Description} - `!v strftime("%Y-%m-%d %I:%M%P")`
+// TODO: ${1:Description} - `!v strftime("%Y-%m-%d %I:%M%P")`
 endsnippet
 
 snippet st "Struct" b
@@ -67,6 +73,18 @@ impl $1 {
 			${5}
 		};
 	}
+}
+endsnippet
+
+snippet im "Struct implementation" b
+impl ${1} {
+	${2}
+}
+endsnippet
+
+snippet imf "Trait implementation" b
+impl ${1} for ${2} {
+	${3}
 }
 endsnippet
 
