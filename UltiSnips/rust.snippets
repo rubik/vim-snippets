@@ -10,16 +10,20 @@ fn ${1:function_name}(${2})${3/..*/ -> /}${3} {
 }
 endsnippet
 
-snippet pri "print!(..)" b
+snippet pri "print!(..)" w
 print!("${1}"${2/..*/, /}${2});
 endsnippet
 
-snippet pln "println!(..)" b
+snippet pln "println!(..)" w
 println!("${1}"${2/..*/, /}${2});
 endsnippet
 
 snippet fmt "format!(..)"
 format!("${1}"${2/..*/, /}${2});
+endsnippet
+
+snippet # "#[] attribute"
+#[${1}]
 endsnippet
 
 snippet macro "macro_rules!" b
@@ -36,7 +40,7 @@ mod ${1:`!p snip.rv = snip.basename.lower() or "name"`} {
 }
 endsnippet
 
-snippet for "for .. in .." b
+snippet for "for .. in .." w
 for ${1:i} in ${2:${3:0us}..${4:10}} {
 	${VISUAL}${0}
 }
