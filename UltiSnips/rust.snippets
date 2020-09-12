@@ -4,14 +4,26 @@
 
 priority -50
 
-snippet fn "A function, optionally with arguments and return type." b
+snippet fn "A function, optionally with arguments and return type." w
 fn ${1:function_name}(${2})${3/..*/ -> /}${3} {
 	${VISUAL}${0}
 }
 endsnippet
 
-snippet pfn "A public function, optionally with arguments and return type." b
+snippet afn "An async function, optionally with arguments and return type." w
+async fn ${1:function_name}(${2})${3/..*/ -> /}${3} {
+	${VISUAL}${0}
+}
+endsnippet
+
+snippet pfn "A public function, optionally with arguments and return type." w
 pub fn ${1:function_name}(${2})${3/..*/ -> /}${3} {
+	${VISUAL}${0}
+}
+endsnippet
+
+snippet pafn "A public async function, optionally with arguments and return type." w
+pub async fn ${1:function_name}(${2})${3/..*/ -> /}${3} {
 	${VISUAL}${0}
 }
 endsnippet
@@ -24,7 +36,7 @@ snippet pln "println!(..)" w
 println!("${1}"${2/..*/, /}${2});
 endsnippet
 
-snippet fmt "format!(..)"
+snippet fmt "format!(..)" w
 format!("${1}"${2/..*/, /}${2});
 endsnippet
 
