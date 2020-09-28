@@ -74,6 +74,12 @@ struct ${1:`!p snip.rv = snip.basename.title() or "Name"`} {
 }
 endsnippet
 
+snippet pst "Struct" b
+pub struct ${1:`!p snip.rv = snip.basename.title() or "Name"`} {
+	${VISUAL}${0}
+}
+endsnippet
+
 snippet stn "Struct with new constructor." b
 pub struct ${1:`!p snip.rv = snip.basename.title() or "Name"`} {
 	${3}
