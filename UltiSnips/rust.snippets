@@ -64,6 +64,18 @@ for ${1:i} in ${2:${3:0us}..${4:10}} {
 }
 endsnippet
 
+snippet if "if .. then .." w
+if ${1} {
+	${2}
+}
+endsnippet
+
+snippet match "match expression" w
+match ${1} {
+	${2} => ${3}
+}
+endsnippet
+
 snippet todo "A Todo comment"
 // TODO: ${1:Description} - `!v strftime("%Y-%m-%d %I:%M%P")`
 endsnippet
